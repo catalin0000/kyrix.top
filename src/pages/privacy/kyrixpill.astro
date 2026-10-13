@@ -1,0 +1,447 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { Image } from 'astro:assets';
+import kyrixPillIcon from '~/assets/images/kyrixpill-icon.png';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Privacy Policy - KyrixPill',
+  description:
+    'Official Privacy Policy for KyrixPill: Medication Tracker Android application. 100% offline, zero data collection, no trackers, and complete local device privacy.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 py-12 sm:px-6 mx-auto lg:px-8 lg:py-16 max-w-4xl">
+    <!-- Breadcrumb / Back Link -->
+    <div class="mb-8">
+      <a
+        href={getPermalink('/privacy')}
+        class="inline-flex items-center text-sm font-medium text-primary dark:text-blue-400 hover:underline gap-1.5"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Back to all Privacy Policies
+      </a>
+    </div>
+
+    <!-- Header Card -->
+    <header class="border-b border-slate-200 dark:border-slate-800 pb-8 mb-10">
+      <div class="flex items-start sm:items-center gap-4 mb-4">
+        <Image
+          src={kyrixPillIcon}
+          alt="KyrixPill Logo"
+          class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl shadow-md border border-slate-200 dark:border-slate-700 object-cover flex-shrink-0"
+        />
+        <div>
+          <span class="inline-block text-xs font-bold tracking-wider uppercase text-primary dark:text-blue-400 mb-1">
+            Official Legal Document
+          </span>
+          <h1 class="font-extrabold font-heading text-3xl sm:text-4xl text-slate-900 dark:text-white leading-tight">
+            Privacy Policy
+          </h1>
+          <p class="text-base text-slate-600 dark:text-slate-400 font-medium mt-1">
+            KyrixPill: Medication Tracker (<code
+              class="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded border border-slate-200 dark:border-slate-700"
+              >com.kyrixpill</code
+            >)
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/60"
+      >
+        <span><strong>Package:</strong> <code>com.kyrixpill</code></span>
+        <span>•</span>
+        <span><strong>Last Updated:</strong> October 13, 2026</span>
+        <span>•</span>
+        <span><strong>Effective Date:</strong> October 13, 2026</span>
+      </div>
+
+      <!-- Google Play Official Notice Banner -->
+      <div
+        class="mt-5 p-4 rounded-xl bg-blue-50/70 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900/50 text-sm text-slate-700 dark:text-slate-300"
+      >
+        <strong class="text-blue-800 dark:text-blue-300">Application Privacy Declaration:</strong> This privacy policy governs
+        the KyrixPill application published on the Google Play Store. KyrixPill is engineered with a strict <strong
+          >100% offline-first architecture</strong
+        > — your personal health and medication information is never uploaded, tracked, or shared.
+      </div>
+
+      <!-- Highlights Badges -->
+      <div class="flex flex-wrap gap-2 mt-5">
+        <span
+          class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60"
+        >
+          ✓ 100% Offline Architecture
+        </span>
+        <span
+          class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60"
+        >
+          ✓ Zero Data Collection
+        </span>
+        <span
+          class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60"
+        >
+          ✓ Zero Trackers / No SDKs
+        </span>
+        <span
+          class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60"
+        >
+          ✓ No Advertising ID (AD_ID)
+        </span>
+        <span
+          class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60"
+        >
+          ✓ Encrypted Device Storage
+        </span>
+      </div>
+    </header>
+
+    <!-- Key Pillars Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+      <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+        <div class="text-2xl mb-2">🔒</div>
+        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">100% Offline Isolation</h3>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          The app does not declare the Android INTERNET permission. It is technically incapable of sending data over any
+          network.
+        </p>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+        <div class="text-2xl mb-2">🛡️</div>
+        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Zero Tracking or Ads</h3>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          No analytics engines, no advertising libraries, no tracking pixels, and no cloud databases. Your medical data
+          stays strictly yours.
+        </p>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+        <div class="text-2xl mb-2">🗑️</div>
+        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Instant User Deletion</h3>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          Wipe all schedules, logs, and profile records at any time directly in Settings or by clearing app storage in
+          Android.
+        </p>
+      </div>
+    </div>
+
+    <!-- Main Content Body -->
+    <div
+      class="prose prose-slate dark:prose-invert max-w-none prose-headings:font-heading prose-headings:font-bold prose-headings:tracking-tight prose-a:text-primary dark:prose-a:text-blue-400"
+    >
+      <h2>1. Privacy Policy Overview & Scope</h2>
+      <p>
+        This <strong>Privacy Policy</strong> describes how <strong>KyrixPill: Medication Tracker</strong> ("we", "our", "us",
+        or "the App", Android package <code>com.kyrixpill</code>) handles your information. We believe health and
+        medication routines are among the most sensitive personal data that exist. Our core commitment is simple: <strong
+          >your health data belongs exclusively to you and will never leave your physical device.</strong
+        >
+      </p>
+      <p>
+        This policy explains why our offline-first architecture guarantees your privacy, outlines our required device
+        permissions, details our zero data collection practices, and explains how you can exercise full control and
+        deletion of your data in strict compliance with Google Play Developer Program Policies, Google Play Health Apps
+        Policies, and global privacy standards.
+      </p>
+
+      <h2>2. Summary of Data Practices: Zero Data Collection</h2>
+      <ul>
+        <li>
+          <strong>No Personal Data Collection:</strong> KyrixPill does not collect, record, harvest, transmit, sell, rent,
+          or share personal, medical, or diagnostic information.
+        </li>
+        <li>
+          <strong>No Internet Permission:</strong> The application manifest does <em>not</em> request the <code
+            >android.permission.INTERNET</code
+          > permission. The Android operating system strictly prevents the application from opening sockets or making network
+          calls.
+        </li>
+        <li>
+          <strong>No Third-Party Analytics:</strong> We do not integrate Google Analytics, Firebase, Crashlytics, Mixpanel,
+          Segment, Facebook SDK, or any other telemetry frameworks.
+        </li>
+        <li>
+          <strong>No Advertising ID (AD_ID):</strong> The application does not declare or access the Google Advertising ID
+          (<code>com.google.android.gms.permission.AD_ID</code>).
+        </li>
+        <li>
+          <strong>No User Accounts:</strong> You do not need an account, email address, password, or login credentials to
+          use the application.
+        </li>
+      </ul>
+
+      <h2>3. Information Handled Strictly on Your Device</h2>
+      <p>
+        All data entered into KyrixPill is stored exclusively within your device's isolated local SQLite database
+        (Room):
+      </p>
+      <ul>
+        <li>
+          <strong>Medication Schedules:</strong> Medication names, shapes, colors, dosages, units (e.g., mg, ml, IU, drops,
+          tablets), intake schedules, current pill inventory counts, and refill thresholds.
+        </li>
+        <li>
+          <strong>Dose Adherence Records:</strong> Historical timestamps of when doses were logged as taken, skipped, snoozed,
+          or rescheduled, along with custom taken quantities and optional notes.
+        </li>
+        <li>
+          <strong>Symptoms & Health Logs:</strong> Symptom descriptions, severity ratings (mild, moderate, severe), onset
+          and resolution timestamps, and associated notes.
+        </li>
+        <li>
+          <strong>Profiles & Customization:</strong> Local nicknames and color palette themes selected to distinguish medications
+          for yourself, family members, or pets.
+        </li>
+        <li>
+          <strong>App Preferences:</strong> Notification choices, alarm sound selections, vibration toggles, and home screen
+          widget preferences.
+        </li>
+        <li>
+          <strong>Doctor Reports (PDF):</strong> Clinical-grade medication adherence reports generated on demand by you, saved
+          directly to the device directory you specify via Android's Storage Access Framework.
+        </li>
+      </ul>
+
+      <h2>4. On-Device Storage & Cryptographic Security</h2>
+      <h3>Android Sandbox Isolation</h3>
+      <p>
+        Android enforces strict, kernel-level application sandboxing. KyrixPill stores its SQLite database within the
+        App's private internal storage directory: <code>/data/user/0/com.kyrixpill/</code>.
+      </p>
+      <ul>
+        <li>
+          <strong>Application Isolation:</strong> Android assigns KyrixPill a unique Linux User ID (UID). Operating system
+          file permissions and SELinux policies strictly prevent any other application on your device from reading or modifying
+          KyrixPill's files.
+        </li>
+        <li>
+          <strong>Hardware-Backed File-Based Encryption (FBE):</strong> On modern Android devices, all internal app storage
+          is hardware-encrypted at rest using AES-256 encryption keys managed by your device's secure hardware (Trusted Execution
+          Environment / StrongBox) tied to your lock screen credentials. When your device is locked or powered down, your
+          medication records are cryptographically inaccessible.
+        </li>
+      </ul>
+
+      <h2>5. Data Retention & Deletion Policy</h2>
+      <p>
+        In accordance with Google Play's Data Safety and User Data policies, users retain complete authority to delete
+        their data at any time:
+      </p>
+
+      <h3>Retention Period</h3>
+      <p>
+        Data remains stored locally on your device for as long as you choose to keep the App installed or until you
+        explicitly delete it. Because we operate zero remote servers, we maintain no backups, logs, or secondary copies
+        of your data.
+      </p>
+
+      <h3>How You Can Delete Your Data</h3>
+      <ol>
+        <li>
+          <strong>In-App Immediate Deletion:</strong> Open KyrixPill &gt; go to <strong>Settings</strong> &gt; tap <strong
+            >Reset Profile Data</strong
+          > (or swipe to delete individual medications/symptoms). This immediately deletes the selected records directly from
+          the on-device SQLite database.
+        </li>
+        <li>
+          <strong>Android System Storage Clear:</strong> Open your Android device <strong>Settings</strong> &gt; <strong
+            >Apps</strong
+          > &gt; <strong>KyrixPill</strong> &gt; <strong>Storage & Cache</strong> &gt; tap <strong
+            >Clear Storage / Clear Data</strong
+          >. This permanently resets all application databases, preferences, and cached assets.
+        </li>
+        <li>
+          <strong>App Uninstallation:</strong> Uninstalling KyrixPill from your Android device causes the operating system
+          to immediately and permanently delete the entire private sandbox directory, including all medication schedules and
+          intake histories.
+        </li>
+        <li>
+          <strong>No Server-Side Request Needed:</strong> Because KyrixPill never transmits data to any server, there is no
+          remote data to request deletion for. Once removed from your phone, your data is permanently gone.
+        </li>
+      </ol>
+
+      <h2>6. Device Permissions and Why They Are Needed</h2>
+      <p>
+        KyrixPill requests only the minimal Android permissions necessary to trigger scheduled dose reminders and alarms
+        locally:
+      </p>
+
+      <div class="overflow-x-auto my-6 not-prose">
+        <table
+          class="w-full text-left text-xs sm:text-sm border-collapse rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800"
+        >
+          <thead>
+            <tr class="bg-slate-100 dark:bg-slate-800/80 text-slate-900 dark:text-white">
+              <th class="p-3 sm:p-4 border-b border-slate-200 dark:border-slate-800 font-bold">Permission</th>
+              <th class="p-3 sm:p-4 border-b border-slate-200 dark:border-slate-800 font-bold">Technical Name</th>
+              <th class="p-3 sm:p-4 border-b border-slate-200 dark:border-slate-800 font-bold"
+                >Exact Purpose & Justification</th
+              >
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold">Notifications</td>
+              <td class="p-3 sm:p-4"
+                ><code class="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">POST_NOTIFICATIONS</code
+                ></td
+              >
+              <td class="p-3 sm:p-4"
+                >Required on Android 13+ to post dose reminders, snoozed alarms, and stock refill notices to your
+                notification shade.</td
+              >
+            </tr>
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold">Exact Alarms</td>
+              <td class="p-3 sm:p-4"
+                ><code class="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">SCHEDULE_EXACT_ALARM</code
+                ></td
+              >
+              <td class="p-3 sm:p-4"
+                >Enables reminders to ring at the exact minute scheduled, even when the device enters low-power battery
+                Doze mode. Can be toggled off in App Settings.</td
+              >
+            </tr>
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold">Boot Completed</td>
+              <td class="p-3 sm:p-4"
+                ><code class="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">RECEIVE_BOOT_COMPLETED</code
+                ></td
+              >
+              <td class="p-3 sm:p-4"
+                >Reschedules your pending medication reminders when your phone is restarted or powered on.</td
+              >
+            </tr>
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold">Full-Screen Intent</td>
+              <td class="p-3 sm:p-4"
+                ><code class="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">USE_FULL_SCREEN_INTENT</code
+                ></td
+              >
+              <td class="p-3 sm:p-4"
+                >Allows the urgent alarm UI to display over the lock screen when a high-priority dose alarm rings.</td
+              >
+            </tr>
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold">Vibration</td>
+              <td class="p-3 sm:p-4"
+                ><code class="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">VIBRATE</code></td
+              >
+              <td class="p-3 sm:p-4">Vibrates the device during active reminder alarms and notifications.</td>
+            </tr>
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold">Wake Lock</td>
+              <td class="p-3 sm:p-4"
+                ><code class="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">WAKE_LOCK</code></td
+              >
+              <td class="p-3 sm:p-4"
+                >Keeps the processor active briefly while audio plays and the alarm screen initializes while the display
+                is sleeping.</td
+              >
+            </tr>
+            <tr>
+              <td class="p-3 sm:p-4 font-semibold">Legacy Storage</td>
+              <td class="p-3 sm:p-4"
+                ><code class="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded">WRITE_EXTERNAL_STORAGE</code
+                ><br /><span class="text-xs text-slate-500">(maxSdkVersion="28")</span></td
+              >
+              <td class="p-3 sm:p-4"
+                >Used strictly on legacy Android 8.0 and 9.0 devices to export PDF Doctor Reports. Android 10+ devices
+                use standard Scoped Storage without this permission.</td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-xs text-slate-500 italic">
+        None of these permissions grant network access or allow remote data sharing.
+      </p>
+
+      <h2>7. Health Apps Policy Compliance & Medical Disclaimer</h2>
+      <div
+        class="not-prose my-6 p-5 rounded-2xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/50"
+      >
+        <div class="flex items-start gap-3">
+          <span class="text-2xl flex-shrink-0">⚠️</span>
+          <div>
+            <h4 class="text-base font-bold text-amber-900 dark:text-amber-200 mb-1">Important Medical Disclaimer</h4>
+            <p class="text-xs sm:text-sm text-amber-800 dark:text-amber-300 leading-relaxed">
+              KyrixPill is a personal schedule organization and adherence tracking tool. It is <strong>NOT</strong> a certified
+              medical device and is <strong>NOT</strong> intended to diagnose, cure, mitigate, treat, or prevent any disease
+              or medical condition.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <ul>
+        <li>
+          <strong>No Medical Diagnosis or Prescription:</strong> KyrixPill does not provide clinical medical advice, diagnostic
+          evaluations, drug-drug interaction assessments, or dosage calculations.
+        </li>
+        <li>
+          <strong>Not a Substitute for Healthcare Professionals:</strong> KyrixPill is never a replacement for professional
+          clinical advice, physician consultations, or licensed pharmacists. Always consult your qualified healthcare provider
+          with questions regarding medications, symptoms, or medical conditions.
+        </li>
+        <li>
+          <strong>Adherence Utility Only:</strong> All medication names, schedules, and dosages are entered directly by you
+          or under the guidance of your healthcare provider.
+        </li>
+      </ul>
+
+      <h2>8. Children's Privacy</h2>
+      <p>
+        KyrixPill is directed to adults (age 18 and older) managing their own medications or family health routines.
+        Because the App operates 100% offline and does not collect any personal data, we do not knowingly collect,
+        store, or solicit personal data from children under the age of 13 (or under 16 in the European Economic Area /
+        UK).
+      </p>
+
+      <h2>9. Policy Updates</h2>
+      <p>
+        We may update this Privacy Policy from time to time to reflect modifications in application features, Android
+        operating system guidelines, or legal requirements. When updates occur, the <em>Last Updated</em> date at the top
+        will be updated, details will be noted in in-app Release Notes, and the newest policy will remain published at this
+        URL.
+      </p>
+
+      <h2>10. Developer Contact & Support</h2>
+      <div
+        class="not-prose my-6 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 text-sm"
+      >
+        <p class="text-slate-700 dark:text-slate-300 mb-3">
+          If you have questions, feedback, or inquiries regarding this Privacy Policy or KyrixPill's local data security
+          architecture, please contact us:
+        </p>
+        <div class="space-y-2 text-slate-600 dark:text-slate-400">
+          <p>
+            <strong>GitHub Repository & Issue Tracker:</strong>{' '}
+            <a
+              href="https://github.com/catalin0000/kyrixpill"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary dark:text-blue-400 font-medium hover:underline"
+            >
+              https://github.com/catalin0000/kyrixpill
+            </a>
+          </p>
+          <p>
+            <strong>Developer Support Email:</strong>{' '}
+            <code
+              class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded border border-slate-200 dark:border-slate-700"
+              >support@kyrixpill.com</code
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

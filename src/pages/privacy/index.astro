@@ -1,27 +1,100 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import { Image } from 'astro:assets';
+import kyrixPillIcon from '~/assets/images/kyrixpill-icon.png';
 import { getPermalink } from '~/utils/permalinks';
 
-const metadata = { title: 'Privacy Policies', description: 'Privacy policies for Kyrix apps.' };
-
-// Add new apps here, plus a matching file in src/pages/privacy/<slug>.md
-const apps = [{ name: 'KyrixPill', slug: 'kyrixpill' }];
+const metadata = {
+  title: 'Privacy Policies | Kyrix',
+  description:
+    'Official privacy policies for Kyrix Android applications. Offline-first, zero tracking, and user data protection.',
+};
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot="announcement"></Fragment>
   <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
-    <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">Privacy Policies</h1>
-    <ul class="mt-8 text-lg list-disc pl-6">
-      {
-        apps.map((app) => (
-          <li>
-            <a class="text-primary dark:text-blue-400 underline" href={getPermalink(`/privacy/${app.slug}`)}>
-              {app.name}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    <div class="mb-12">
+      <span class="text-xs font-bold uppercase tracking-wider text-primary dark:text-blue-400"
+        >Legal & Transparency</span
+      >
+      <h1
+        class="font-bold font-heading text-4xl md:text-5xl leading-tight tracking-tight text-slate-900 dark:text-white mt-1"
+      >
+        Privacy Policies
+      </h1>
+      <p class="mt-3 text-lg text-slate-600 dark:text-slate-400">
+        At Kyrix, we design applications with a <strong>privacy-first, offline architecture</strong>. Our apps never
+        collect, monetize, or transmit your personal data.
+      </p>
+    </div>
+
+    <!-- App Privacy Cards -->
+    <div class="space-y-6">
+      <div
+        class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 shadow-sm hover:shadow-md transition-shadow"
+      >
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div class="flex items-start gap-4">
+            <Image
+              src={kyrixPillIcon}
+              alt="KyrixPill"
+              class="w-16 h-16 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 object-cover flex-shrink-0"
+            />
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h2 class="text-xl font-bold font-heading text-slate-900 dark:text-white">
+                  KyrixPill: Medication Tracker
+                </h2>
+                <span
+                  class="px-2 py-0.5 text-xs font-semibold rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300"
+                >
+                  100% Offline
+                </span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-2">
+                Package: <code class="bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded">com.kyrixpill</code> • Updated Oct
+                13, 2026
+              </p>
+              <p class="text-sm text-slate-600 dark:text-slate-300">
+                Full disclosure of local data storage, user-driven data deletion, Android device permissions, and Google
+                Play Health Apps compliance.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href={getPermalink('/privacy/kyrixpill')}
+            class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-semibold text-sm bg-primary text-white hover:bg-blue-700 transition-colors shadow-sm"
+          >
+            Read Policy →
+          </a>
+        </div>
+
+        <div
+          class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-slate-200/70 dark:border-slate-700/60 text-xs text-slate-600 dark:text-slate-400"
+        >
+          <span class="flex items-center gap-1">🛡️ No Ad Trackers</span>
+          <span>•</span>
+          <span class="flex items-center gap-1">🔒 No Cloud Database</span>
+          <span>•</span>
+          <span class="flex items-center gap-1">📱 AES-256 On-Device Storage</span>
+          <span>•</span>
+          <span class="flex items-center gap-1">🚫 No Advertising ID</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kyrix Studio Privacy Promise -->
+    <div
+      class="mt-16 p-6 rounded-2xl bg-blue-50/60 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900/40 text-sm text-slate-700 dark:text-slate-300"
+    >
+      <h3 class="font-bold text-base text-blue-900 dark:text-blue-300 mb-2">The Kyrix Privacy Standard</h3>
+      <p class="mb-2">Every app published under Kyrix follows these fundamental rules:</p>
+      <ul class="list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-400">
+        <li>Zero transmission of private personal or health data over the network.</li>
+        <li>Zero advertising SDKs, tracking pixels, or third-party telemetry frameworks.</li>
+        <li>Complete user authority to delete all records instantly at any time.</li>
+      </ul>
+    </div>
   </section>
 </Layout>

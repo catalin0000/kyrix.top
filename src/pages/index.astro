@@ -1,38 +1,166 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import { Image } from 'astro:assets';
+import kyrixPillIcon from '~/assets/images/kyrixpill-icon.png';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: 'Kyrix',
-  description: 'Kyrix builds Android apps. Find our apps and their privacy policies here.',
+  title: 'Kyrix - Private, Native Android Apps',
+  description:
+    'Kyrix builds fast, beautiful, and 100% offline-first Android apps designed to respect your privacy and protect your personal data.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot="announcement"></Fragment>
-
+  <!-- Hero Section -->
   <Hero
-    tagline="Kyrix"
-    title="Simple Android apps"
+    tagline="Kyrix Studio"
+    title="Thoughtful, Private Android Apps"
     image={{ src: '~/assets/images/kyrix-logo.jpg', alt: 'Kyrix logo' }}
-    actions={[{ variant: 'primary', text: 'Privacy policies', href: getPermalink('/privacy') }]}
+    actions={[
+      { variant: 'primary', text: 'Explore KyrixPill', href: '#apps' },
+      { variant: 'secondary', text: 'Privacy Policies', href: getPermalink('/privacy') },
+    ]}
   >
-    <Fragment slot="subtitle">Welcome to Kyrix. Here you will find our apps and their privacy policies.</Fragment>
+    <Fragment slot="subtitle">
+      We craft focused, battery-efficient, and <strong>100% offline-first</strong> Android utilities designed to keep your
+      personal information completely secure on your physical device.
+    </Fragment>
   </Hero>
 
-  <Features
-    id="apps"
-    title="Our apps"
-    subtitle="More apps coming soon."
-    columns={1}
+  <!-- Featured Apps Section -->
+  <section id="apps" class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-5xl">
+    <div class="text-center mb-12">
+      <span class="text-xs font-bold uppercase tracking-wider text-primary dark:text-blue-400">Our Applications</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 dark:text-white mt-1">
+        Featured Apps
+      </h2>
+      <p class="mt-3 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+        Tools engineered with privacy-by-design, beautiful Material 3 aesthetics, and zero external trackers.
+      </p>
+    </div>
+
+    <!-- KyrixPill Showcase Card -->
+    <div
+      class="p-8 sm:p-10 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 shadow-md hover:shadow-xl transition-all"
+    >
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+        <Image
+          src={kyrixPillIcon}
+          alt="KyrixPill: Medication Tracker"
+          class="w-28 h-28 sm:w-32 sm:h-32 rounded-3xl shadow-lg border border-slate-200 dark:border-slate-700 object-cover flex-shrink-0"
+        />
+
+        <div class="flex-1 text-center md:text-left">
+          <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-2">
+            <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-slate-900 dark:text-white">KyrixPill</h3>
+            <span
+              class="px-2.5 py-0.5 text-xs font-bold rounded-full bg-blue-100 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300"
+            >
+              Medication Tracker
+            </span>
+            <span
+              class="px-2.5 py-0.5 text-xs font-bold rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300"
+            >
+              100% Offline
+            </span>
+          </div>
+
+          <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed mb-6">
+            The smart, private medication reminder, pill tracker, dosage log, and adherence calendar. Built to make
+            tracking prescriptions, vitamins, and supplements effortless without sharing your health data with anyone.
+          </p>
+
+          <!-- Feature Bullets Grid -->
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300 mb-8"
+          >
+            <div class="flex items-center gap-1.5 justify-center md:justify-start">
+              <span>⏰</span> Exact Scheduled Alarms
+            </div>
+            <div class="flex items-center gap-1.5 justify-center md:justify-start">
+              <span>📊</span> Today's Adherence Rings
+            </div>
+            <div class="flex items-center gap-1.5 justify-center md:justify-start">
+              <span>📑</span> Doctor PDF Reports
+            </div>
+            <div class="flex items-center gap-1.5 justify-center md:justify-start">
+              <span>💊</span> Stock & Refill Alerts
+            </div>
+            <div class="flex items-center gap-1.5 justify-center md:justify-start">
+              <span>🔒</span> Zero Cloud Telemetry
+            </div>
+            <div class="flex items-center gap-1.5 justify-center md:justify-start">
+              <span>🚫</span> Zero In-App Ads
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
+            <a
+              href={getPermalink('/privacy/kyrixpill')}
+              class="px-5 py-2.5 rounded-xl font-semibold text-sm bg-primary text-white hover:bg-blue-700 transition-colors shadow-sm"
+            >
+              Privacy Policy →
+            </a>
+            <a
+              href="https://github.com/catalin0000/kyrixpill"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-5 py-2.5 rounded-xl font-semibold text-sm bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Studio Philosophy Features -->
+  <Features2
+    title="The Kyrix Difference"
+    subtitle="Why we believe software should be simple, respectful, and private."
+    columns={3}
     items={[
       {
-        title: 'KyrixPill',
-        description: 'An Android app by Kyrix. Read its privacy policy.',
-        icon: 'tabler:pill',
-        callToAction: { text: 'Privacy policy', href: getPermalink('/privacy/kyrixpill') },
+        title: '100% Offline & Private',
+        description:
+          'Your health, habits, and schedules belong exclusively to you. None of our apps require an account, and none send your data over the internet.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Native Performance',
+        description:
+          'Engineered directly in Kotlin and Android Jetpack Compose for buttery-smooth 120Hz frame rates, instant startup times, and minimal battery consumption.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'No Subscriptions',
+        description:
+          'We reject monthly recurring fees for personal utilities. Download for free and optionally unlock unlimited profiles with a single lifetime purchase.',
+        icon: 'tabler:coin',
+      },
+    ]}
+  />
+
+  <!-- Call to Action -->
+  <CallToAction
+    title="Ready to take control of your medication routine?"
+    subtitle="Discover KyrixPill on GitHub or review our strict privacy disclosures."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Read KyrixPill Privacy Policy',
+        href: getPermalink('/privacy/kyrixpill'),
+      },
+      {
+        variant: 'secondary',
+        text: 'Contact Developer',
+        href: 'https://github.com/catalin0000/kyrixpill/issues',
       },
     ]}
   />
