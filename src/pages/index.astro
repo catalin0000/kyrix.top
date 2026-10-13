@@ -1,0 +1,39 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Kyrix',
+  description: 'Kyrix builds Android apps. Find our apps and their privacy policies here.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+
+  <Hero
+    tagline="Kyrix"
+    title="Simple Android apps"
+    image={{ src: '~/assets/images/kyrix-logo.jpg', alt: 'Kyrix logo' }}
+    actions={[{ variant: 'primary', text: 'Privacy policies', href: getPermalink('/privacy') }]}
+  >
+    <Fragment slot="subtitle">Welcome to Kyrix. Here you will find our apps and their privacy policies.</Fragment>
+  </Hero>
+
+  <Features
+    id="apps"
+    title="Our apps"
+    subtitle="More apps coming soon."
+    columns={1}
+    items={[
+      {
+        title: 'KyrixPill',
+        description: 'An Android app by Kyrix. Read its privacy policy.',
+        icon: 'tabler:pill',
+        callToAction: { text: 'Privacy policy', href: getPermalink('/privacy/kyrixpill') },
+      },
+    ]}
+  />
+</Layout>

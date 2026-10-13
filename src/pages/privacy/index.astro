@@ -1,0 +1,27 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = { title: 'Privacy Policies', description: 'Privacy policies for Kyrix apps.' };
+
+// Add new apps here, plus a matching file in src/pages/privacy/<slug>.md
+const apps = [{ name: 'KyrixPill', slug: 'kyrixpill' }];
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
+    <h1 class="font-bold font-heading text-4xl md:text-5xl leading-tighter tracking-tighter">Privacy Policies</h1>
+    <ul class="mt-8 text-lg list-disc pl-6">
+      {
+        apps.map((app) => (
+          <li>
+            <a class="text-primary dark:text-blue-400 underline" href={getPermalink(`/privacy/${app.slug}`)}>
+              {app.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>
