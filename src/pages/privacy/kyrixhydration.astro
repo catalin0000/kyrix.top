@@ -1,0 +1,273 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { Image } from 'astro:assets';
+import kyrixHydrationIcon from '~/assets/images/kyrixhydration-icon.png';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Privacy Policy - Kyrix Hydration',
+  description:
+    'Official Privacy Policy for Kyrix Hydration: Water Tracker Android application. 100% offline, zero data collection, no trackers, and complete local device privacy.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 py-12 sm:px-6 mx-auto lg:px-8 lg:py-16 max-w-4xl">
+    <!-- Breadcrumb / Back Link -->
+    <div class="mb-8">
+      <a
+        href={getPermalink('/privacy')}
+        class="inline-flex items-center text-sm font-medium text-primary dark:text-blue-400 hover:underline gap-1.5"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        Back to all Privacy Policies
+      </a>
+    </div>
+
+    <!-- Header Card -->
+    <header class="border-b border-slate-200 dark:border-slate-800 pb-8 mb-10">
+      <div class="flex items-start sm:items-center gap-4 mb-4">
+        <Image
+          src={kyrixHydrationIcon}
+          alt="Kyrix Hydration Logo"
+          class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl shadow-md border border-slate-200 dark:border-slate-700 object-cover flex-shrink-0"
+        />
+        <div>
+          <span class="inline-block text-xs font-bold tracking-wider uppercase text-primary dark:text-blue-400 mb-1">
+            Official Legal Document
+          </span>
+          <h1 class="font-extrabold font-heading text-3xl sm:text-4xl text-slate-900 dark:text-white leading-tight">
+            Privacy Policy
+          </h1>
+          <p class="text-base text-slate-600 dark:text-slate-400 font-medium mt-1">
+            Kyrix Hydration: Daily Water Tracker (<code
+              class="text-xs bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded border border-slate-200 dark:border-slate-700"
+              >com.kyrix.hydration</code
+            >)
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/60"
+      >
+        <span><strong>Package:</strong> <code>com.kyrix.hydration</code></span>
+        <span>•</span>
+        <span><strong>Last Updated:</strong> October 21, 2026</span>
+        <span>•</span>
+        <span><strong>Effective Date:</strong> October 21, 2026</span>
+      </div>
+
+      <!-- Google Play Official Notice Banner -->
+      <div
+        class="mt-5 p-4 rounded-xl bg-blue-50/70 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900/50 text-sm text-slate-700 dark:text-slate-300"
+      >
+        <strong class="text-blue-800 dark:text-blue-300">Application Privacy Declaration:</strong> This privacy policy governs
+        the Kyrix Hydration application published on the Google Play Store. Kyrix Hydration is built with a strict <strong
+          >100% offline-first architecture</strong
+        > — your personal health, water intake, and hydration habits are never uploaded, tracked, or shared.
+      </div>
+
+      <!-- Highlights Badges -->
+      <div class="flex flex-wrap gap-2 mt-5">
+        <span
+          class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60"
+        >
+          ✓ 100% Offline Architecture
+        </span>
+        <span
+          class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60"
+        >
+          ✓ Zero Personal Data Collection
+        </span>
+        <span
+          class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60"
+        >
+          ✓ Zero Trackers / No Analytics SDKs
+        </span>
+        <span
+          class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60"
+        >
+          ✓ No Advertising ID (AD_ID)
+        </span>
+        <span
+          class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60"
+        >
+          ✓ Sandboxed Local Room Database
+        </span>
+      </div>
+    </header>
+
+    <!-- Key Pillars Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+      <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+        <div class="text-2xl mb-2">💧</div>
+        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">100% Offline by Design</h3>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          The app does not require user accounts or cloud databases. It is technically engineered to store everything on your physical device.
+        </p>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+        <div class="text-2xl mb-2">🛡️</div>
+        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Zero Tracking or Ads</h3>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          No analytics SDKs, no advertising trackers, and no telemetry. Your daily hydration routine remains completely confidential.
+        </p>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+        <div class="text-2xl mb-2">📊</div>
+        <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1">Full User Ownership</h3>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+          Export your logs anytime via CSV, create local JSON backups, or clear all history with a single tap in Data Management.
+        </p>
+      </div>
+    </div>
+
+    <!-- Main Content Body -->
+    <div
+      class="prose prose-slate dark:prose-invert max-w-none prose-headings:font-heading prose-headings:font-bold prose-headings:tracking-tight prose-a:text-primary dark:prose-a:text-blue-400"
+    >
+      <h2>1. Overview & Core Commitment</h2>
+      <p>
+        This <strong>Privacy Policy</strong> describes how <strong>Kyrix Hydration: Daily Water Tracker</strong> ("we", "our", "us",
+        or "the App", Android package <code>com.kyrix.hydration</code>) handles your information.
+      </p>
+      <p>
+        Kyrix Hydration is built on an unwavering principle: <strong>your health and wellness data belongs entirely to you</strong>.
+        The application operates 100% offline-first. We do not require account registration, email sign-ins, or profile syncing.
+        We do not own, maintain, or connect to external servers that collect or monetize personal hydration metrics.
+      </p>
+
+      <h2>2. Information We Collect: NONE</h2>
+      <div class="not-prose my-6 p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+        <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-2">Data Categories Not Collected:</h4>
+        <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 space-y-1.5 list-disc pl-5">
+          <li><strong>No Identity Data:</strong> No names, email addresses, phone numbers, or account credentials.</li>
+          <li><strong>No Device Identifiers:</strong> No Android Advertising ID (AD_ID), IMEI, MAC address, or hardware fingerprints.</li>
+          <li><strong>No Location Data:</strong> No GPS coordinates, Wi-Fi location, or IP tracking.</li>
+          <li><strong>No Media or Contacts:</strong> No access to your address book, files, camera, or photo gallery.</li>
+        </ul>
+      </div>
+
+      <h2>3. Locally Stored Hydration Data</h2>
+      <p>
+        When you use Kyrix Hydration, the following details are created and saved <strong>strictly on your local device</strong>:
+      </p>
+      <ul>
+        <li><strong>Hydration Intake Logs:</strong> Volume consumed (mL or fl oz), drink type (water, coffee, tea, electrolytes, juice, milk, smoothie, or custom beverage), and timestamps.</li>
+        <li><strong>Daily Target Goals:</strong> Your customized hydration target and optional automated goal calculation parameters (weight, activity level, climate).</li>
+        <li><strong>User Preferences:</strong> Selected theme (e.g., Deep Ocean, Pink Blossom, Frost Winter, Autumn Amber), haptic vibration toggles, reminder sound settings, and notification intervals.</li>
+      </ul>
+      <p>
+        This data is housed in an <strong>Android Room SQLite database</strong> and <strong>Jetpack DataStore</strong> protected by Android's application sandbox security model.
+        No other applications or remote entities can access this data.
+      </p>
+
+      <h2>4. Third-Party Services, SDKs & Trackers</h2>
+      <p>
+        Kyrix Hydration contains <strong>zero third-party tracking frameworks, analytics tools, or monetization SDKs</strong>:
+      </p>
+      <ul>
+        <li><strong>No Analytics SDKs:</strong> Google Analytics, Firebase Telemetry, Mixpanel, and Flurry are not integrated.</li>
+        <li><strong>No Ad Networks:</strong> Google AdMob, Unity Ads, AppLovin, and other advertising libraries are completely excluded.</li>
+        <li><strong>No Crash Telemetry:</strong> Crash logs are not sent to remote servers; crash reporting is handled exclusively by native Android OS mechanisms if enabled by you in system settings.</li>
+      </ul>
+
+      <h2>5. Android Device Permissions</h2>
+      <p>
+        Kyrix Hydration requests only the essential system permissions required to provide reminder notifications and tactile haptics:
+      </p>
+      <div class="not-prose my-6 overflow-x-auto">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60">
+              <th class="p-3 font-semibold text-slate-900 dark:text-white">Permission</th>
+              <th class="p-3 font-semibold text-slate-900 dark:text-white">Purpose & Usage</th>
+              <th class="p-3 font-semibold text-slate-900 dark:text-white">Privacy Impact</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+            <tr>
+              <td class="p-3 font-mono text-xs">POST_NOTIFICATIONS</td>
+              <td class="p-3 text-slate-600 dark:text-slate-300">Delivers scheduled gentle water reminder alerts throughout your waking hours.</td>
+              <td class="p-3 text-emerald-600 dark:text-emerald-400 font-medium">Local scheduling only; zero cloud push.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-mono text-xs">VIBRATE</td>
+              <td class="p-3 text-slate-600 dark:text-slate-300">Provides tactile haptic feedback when tapping buttons, logging drinks, or adjusting targets.</td>
+              <td class="p-3 text-emerald-600 dark:text-emerald-400 font-medium">Hardware motor control only; no data read.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-mono text-xs">RECEIVE_BOOT_COMPLETED</td>
+              <td class="p-3 text-slate-600 dark:text-slate-300">Restores reminder notification schedules following a device restart.</td>
+              <td class="p-3 text-emerald-600 dark:text-emerald-400 font-medium">Local alarm recreation only.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>6. User Data Control, Export & Deletion</h2>
+      <p>
+        You have absolute sovereignty over your hydration records:
+      </p>
+      <ul>
+        <li><strong>CSV Export:</strong> Generate a complete spreadsheet of your hydration entries at any time to inspect or share at your discretion.</li>
+        <li><strong>JSON Backup & Restore:</strong> Create a portable snapshot of all entries and settings to transfer between devices without internet dependency.</li>
+        <li><strong>One-Tap Complete Wipe:</strong> Tap <em>"Clear all entries"</em> inside Settings &gt; Data Management to permanently purge all logged glasses from the SQLite database.</li>
+        <li><strong>App Uninstallation:</strong> Deleting the Kyrix Hydration application from Android immediately purges all application data, databases, and preferences stored on the device.</li>
+      </ul>
+
+      <h2>7. Health Guidance Disclaimer</h2>
+      <div class="not-prose my-6 p-5 rounded-2xl bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 text-sm text-slate-700 dark:text-slate-300">
+        <strong class="text-amber-800 dark:text-amber-300">Important Wellness Notice:</strong> Kyrix Hydration is intended solely for personal habit tracking and general hydration awareness.
+        Hydration targets, intake calculations, and reminders are general suggestions, not medical advice.
+        Kyrix Hydration is not a regulated medical device and does not diagnose, treat, prevent, or cure any medical condition.
+        Individuals with kidney conditions, cardiovascular disease, or specific fluid-restriction requirements should always consult a licensed medical professional for tailored guidance.
+      </div>
+
+      <h2>8. Children's Privacy (COPPA Compliance)</h2>
+      <p>
+        Kyrix Hydration is engineered for general wellness audiences and does not target children under 13.
+        Because the application is completely offline and does not harvest or transmit personal information, we never knowingly collect or share data from children.
+      </p>
+
+      <h2>9. Policy Updates</h2>
+      <p>
+        If this policy is revised to reflect new Android features or platform guidelines, the updated version will be published here with a renewed <em>Last Updated</em> date and documented in the in-app release notes.
+      </p>
+
+      <h2>10. Developer Contact & Open Source</h2>
+      <div
+        class="not-prose my-6 p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 text-sm"
+      >
+        <p class="text-slate-700 dark:text-slate-300 mb-3">
+          For inquiries, feedback, or support regarding Kyrix Hydration or this Privacy Policy, please reach out through our official channels:
+        </p>
+        <div class="space-y-2 text-slate-600 dark:text-slate-400">
+          <p>
+            <strong>GitHub Repository & Issue Tracker:</strong>{' '}
+            <a
+              href="https://github.com/catalin0000/kyrixhydration"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary dark:text-blue-400 font-medium hover:underline"
+            >
+              https://github.com/catalin0000/kyrixhydration
+            </a>
+          </p>
+          <p>
+            <strong>Developer Contact:</strong>{' '}
+            <code
+              class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded border border-slate-200 dark:border-slate-700"
+              >support@kyrix.top</code
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

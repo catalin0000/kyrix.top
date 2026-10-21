@@ -13,11 +13,15 @@ export const footerData = {
   links: [
     {
       title: 'Applications',
-      links: [{ text: 'KyrixPill: Medication Tracker', href: getPermalink('/#apps') }],
+      links: [
+        { text: 'Kyrix Hydration: Water Tracker', href: getPermalink('/#apps') },
+        { text: 'KyrixPill: Medication Tracker', href: getPermalink('/#apps') },
+      ],
     },
     {
       title: 'Privacy & Legal',
       links: [
+        { text: 'Kyrix Hydration Privacy Policy', href: getPermalink('/privacy/kyrixhydration') },
         { text: 'KyrixPill Privacy Policy', href: getPermalink('/privacy/kyrixpill') },
         { text: 'All Privacy Policies', href: getPermalink('/privacy') },
       ],
@@ -25,12 +29,18 @@ export const footerData = {
     {
       title: 'Open Source',
       links: [
+        { text: 'Kyrix Hydration GitHub', href: 'https://github.com/catalin0000/kyrixhydration' },
         { text: 'KyrixPill GitHub', href: 'https://github.com/catalin0000/kyrixpill' },
-        { text: 'Report an Issue', href: 'https://github.com/catalin0000/kyrixpill/issues' },
       ],
     },
   ],
-  secondaryLinks: [{ text: 'Privacy Policy', href: getPermalink('/privacy/kyrixpill') }],
-  socialLinks: [{ ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/catalin0000/kyrixpill' }],
+  secondaryLinks: [
+    { text: 'Hydration Policy', href: getPermalink('/privacy/kyrixhydration') },
+    { text: 'KyrixPill Policy', href: getPermalink('/privacy/kyrixpill') },
+  ],
+  socialLinks: [
+    { ariaLabel: 'Github Kyrix Hydration', icon: 'tabler:brand-github', href: 'https://github.com/catalin0000/kyrixhydration' },
+    { ariaLabel: 'Github KyrixPill', icon: 'tabler:brand-github', href: 'https://github.com/catalin0000/kyrixpill' },
+  ],
   footNote: `© ${new Date().getFullYear()} Kyrix. All rights reserved. 100% Offline, Private Android Applications.`,
 };

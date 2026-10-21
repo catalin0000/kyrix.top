@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import { Image } from 'astro:assets';
 import kyrixPillIcon from '~/assets/images/kyrixpill-icon.png';
+import kyrixHydrationIcon from '~/assets/images/kyrixhydration-icon.png';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
@@ -30,6 +31,60 @@ const metadata = {
 
     <!-- App Privacy Cards -->
     <div class="space-y-6">
+      <!-- Kyrix Hydration Card -->
+      <div
+        class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 shadow-sm hover:shadow-md transition-shadow"
+      >
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div class="flex items-start gap-4">
+            <Image
+              src={kyrixHydrationIcon}
+              alt="Kyrix Hydration"
+              class="w-16 h-16 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 object-cover flex-shrink-0"
+            />
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h2 class="text-xl font-bold font-heading text-slate-900 dark:text-white">
+                  Kyrix Hydration: Daily Water Tracker
+                </h2>
+                <span
+                  class="px-2 py-0.5 text-xs font-semibold rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300"
+                >
+                  100% Offline
+                </span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-2">
+                Package: <code class="bg-slate-100 dark:bg-slate-800 px-1 py-0.5 rounded">com.kyrix.hydration</code> • Updated Oct
+                21, 2026
+              </p>
+              <p class="text-sm text-slate-600 dark:text-slate-300">
+                Detailed disclosure of sandboxed Room local storage, zero analytics, Android permissions, CSV data export, and Google Play compliance.
+              </p>
+            </div>
+          </div>
+
+          <a
+            href={getPermalink('/privacy/kyrixhydration')}
+            class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-semibold text-sm bg-primary text-white hover:bg-blue-700 transition-colors shadow-sm"
+          >
+            Read Policy →
+          </a>
+        </div>
+
+        <div
+          class="flex flex-wrap gap-2 mt-5 pt-4 border-t border-slate-200/70 dark:border-slate-700/60 text-xs text-slate-600 dark:text-slate-400"
+        >
+          <span class="flex items-center gap-1">🛡️ No Ad Trackers</span>
+          <span>•</span>
+          <span class="flex items-center gap-1">🔒 No Cloud Database</span>
+          <span>•</span>
+          <span class="flex items-center gap-1">📱 Local Room Database</span>
+          <span>•</span>
+          <span class="flex items-center gap-1">🚫 No Advertising ID</span>
+        </div>
+      </div>
+
+      <!-- KyrixPill Card -->
       <div
         class="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 shadow-sm hover:shadow-md transition-shadow"
       >
