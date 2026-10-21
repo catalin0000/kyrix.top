@@ -24,15 +24,7 @@ const { badge = '', text = '', href = '', showStars = false } = Astro.props;
         <span class="text-slate-300 dark:text-slate-400 font-medium" set:html={text} />
       )}
       {showStars && (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          class="ltr:ml-auto rtl:mr-auto w-[5.6rem] h-[1.25rem] ml-auto bg-contain bg-right bg-no-repeat inline-block bg-[url(https://img.shields.io/github/stars/arthelokyo/astrowind.svg?style=social&label=Stars&maxAge=86400)]"
-          title="GitHub stars"
-          href="https://github.com/catalin0000/kyrixpill"
-        >
-          <span class="sr-only">GitHub stars</span>
-        </a>
+        <span class="sr-only">Announcement</span>
       )}
     </div>
   ) : null

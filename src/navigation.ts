@@ -27,10 +27,9 @@ export const footerData = {
       ],
     },
     {
-      title: 'Open Source',
+      title: 'Support',
       links: [
-        { text: 'Kyrix Hydration GitHub', href: 'https://github.com/catalin0000/kyrixhydration' },
-        { text: 'KyrixPill GitHub', href: 'https://github.com/catalin0000/kyrixpill' },
+        { text: 'Contact Us', href: 'mailto:support@kyrix.top' },
       ],
     },
   ],
@@ -38,9 +37,6 @@ export const footerData = {
     { text: 'Hydration Policy', href: getPermalink('/privacy/kyrixhydration') },
     { text: 'KyrixPill Policy', href: getPermalink('/privacy/kyrixpill') },
   ],
-  socialLinks: [
-    { ariaLabel: 'Github Kyrix Hydration', icon: 'tabler:brand-github', href: 'https://github.com/catalin0000/kyrixhydration' },
-    { ariaLabel: 'Github KyrixPill', icon: 'tabler:brand-github', href: 'https://github.com/catalin0000/kyrixpill' },
-  ],
+  socialLinks: [],
   footNote: `© ${new Date().getFullYear()} Kyrix. All rights reserved. 100% Offline, Private Android Applications.`,
 };
